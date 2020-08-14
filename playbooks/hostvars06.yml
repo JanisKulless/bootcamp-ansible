@@ -1,0 +1,11 @@
+---
+- name: Gather the facts
+  hosts: all
+  # gathered the machine facts
+  gather_facts: on
+
+  tasks:
+    - name: Find the hostname from hostvars
+      debug:
+        msg: "{{ ansible_all_ipv4_addresses | default('None') }}"
+...

@@ -1,0 +1,22 @@
+---
+- 
+  hosts: all
+  gather_facts: no
+
+  # WORKS WITH -e @external_vars.yml
+  vars_files:
+    - external_vars.yml
+
+  tasks:
+    - name: Get the key values
+      debug:
+        msg: "{{ external_example_key }}"
+
+    - name: Test the dic 
+      debug:
+        msg: "{{ external_dict }}"
+
+    - name: Test the list      
+      debug:        
+        msg: "{{ external_named_list }}"
+...

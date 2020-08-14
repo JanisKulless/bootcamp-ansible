@@ -1,0 +1,10 @@
+---
+- name: my first play
+  hosts: all
+
+- name: my second play
+  hosts: all
+
+- name: my thrird play
+  hosts: all
+...

@@ -1,0 +1,19 @@
+---
+- name: Test the register
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+
+    - name: Resgister
+      command: hostname -s
+      register: hostname_output
+
+    - debug:
+            #        msg: "{{ hostname_output }}"
+        var: hostname_output
+
+    - debug:
+        var: hostname_output.stdout
+...
+

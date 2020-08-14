@@ -1,0 +1,13 @@
+---
+- 
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: Loops
+      debug:
+        msg: "This loop contains {{ item }}"
+      with_items:
+        - fruits
+        - Vegetables
+...

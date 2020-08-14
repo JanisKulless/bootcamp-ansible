@@ -1,0 +1,13 @@
+---
+- name: Variable playbook
+  hosts: all
+  gather_facts: false
+
+  vars: 
+    example_key: abuharis salih
+
+  tasks:
+    - name: This task has the variable
+      debug:
+        msg: "{{ example_key }}"
+...

@@ -1,0 +1,15 @@
+---
+- 
+  hosts: all
+  gather_facts: no
+
+  vars_prompt:
+    - name: username
+      private: true
+
+  tasks:
+      - name: Test prompt
+        debug:
+          msg: "{{ username }}"
+...
+

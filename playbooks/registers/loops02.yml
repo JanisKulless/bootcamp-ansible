@@ -1,0 +1,14 @@
+---
+- 
+  hosts: all
+
+  tasks:
+    - name: Loops through the usernames and create
+      user:
+        name: "{{ item }}"
+        #        state: absent
+      with_items:
+        - salih
+        - abu
+        - haris
+...

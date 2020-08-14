@@ -1,0 +1,14 @@
+---
+- 
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: Condition check
+      command: hostname -s
+      when: ansible_distribution  == "CentOS" or ansible_distribution == "Ubuntu"
+
+
+      # Try installing package based on the distro
+
+...

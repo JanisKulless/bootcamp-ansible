@@ -1,0 +1,13 @@
+---
+- 
+  hosts: all
+
+  tasks:
+    - name: loop with dict
+      user:
+        name: "{{ item.key }}"
+        comment: "{{ item.value.full_name }}"
+      with_dict:
+        abuharis:
+          full_name: Abuharis Salih
+...

@@ -1,0 +1,20 @@
+- name: This play contains dic of variable
+  hosts: all
+  gather_facts: false
+
+  vars:
+    dic:
+      dic_key: This is a dictionary value
+
+  tasks:
+    - name: debug the variable
+      debug: 
+        msg: "{{ dic }}"
+
+    - name: Take value with dot notation
+      debug:
+        msg: "{{ dic.dic_key }}"
+
+    - name: Debug the dic variable with python bracket notation
+      debug: 
+        msg: "{{ dic['dic_key'] }}"
